@@ -112,7 +112,7 @@ node_templates:
         image_id: ami-9267cfe5
         size_id: t2.small
         location_id: eu-west-1
-	name: { get_input: mist_name }
-	tags: { get_input: mist_tags }
-	key: { get_input: mist_key }
+        name: { get_input: mist_name }
+        tags: { get_input: mist_tags }
+        key: { get_input: mist_key }
 	        
