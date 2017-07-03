@@ -92,6 +92,23 @@ inputs:
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #                                                                             #
+# DSL Definitions                                                             #
+#                                                                             #
+# You can use the dsl_definitions section to define arbitrary data structures #
+# that can be reused in different parts of the blueprint using YAML anchors   #
+# and aliases.                                                                #
+#                                                                             #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+dsl_definitions:
+  mist_config: &mist_config
+    mist_uri: { get_input: mist_uri }
+    mist_token: { get_input: mist_token }
+    mist_username: { get_input: mist_username }
+    mist_password: { get_input: mist_password }
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                             #
 # Node Templates                                                              #
 #                                                                             #
 # Node Templates describe the actual instances of node types that eventually  #
@@ -115,4 +132,3 @@ node_templates:
         name: { get_input: mist_name }
         tags: { get_input: mist_tags }
         key: { get_input: mist_key }
-	        
