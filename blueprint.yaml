@@ -128,7 +128,7 @@ node_templates:
         cloud_id: 20c02fc087ca4d8cbd23a8d94aa78b25
         image_id: ami-ed82e39e
         size_id: t2.small
-        location_id: eu-west-1a
+        location_id: eu-west-1c
         name: { get_input: mist_name }
         tags: { get_input: mist_tags }
         key: { get_input: mist_key }
